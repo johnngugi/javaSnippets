@@ -1,8 +1,12 @@
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class ItemList {
 
-    HashMap<String, Integer> lists = new HashMap<String, Integer>();
+    HashMap<String, Integer> lists = new HashMap();
+//    Scanner sc = new Scanner(System.in);
+
+
 
     public void addData() {
 
@@ -33,8 +37,22 @@ public class ItemList {
 
     public int checkPrice(String name) {
 
+        addData();
+
+        System.out.println(lists.get(name));
         return lists.get(name);
 
+    }
+
+    public int totalPrice(String ... items) {
+
+        int total = 0;
+
+        for (String a : items) {
+            total += lists.get(a);
+        }
+        System.out.println(total);
+        return total;
     }
 
 }
