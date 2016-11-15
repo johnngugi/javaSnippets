@@ -1,3 +1,3 @@
 # javaSnippets
 
-Java snippets for practicing learned concepts
+Small java programmes for practicing learned concepts
